@@ -1,6 +1,6 @@
 ## BUILD STAGE ONE
 
-FROM node:14-alpine as gtl
+FROM node:14-alpine as gtl-node
 COPY package*.json \
 	.coveralls.yml \
 	.editorconfig \
@@ -20,7 +20,7 @@ RUN apk add make \
 
 ## BUILD STAGE TWO
 
-FROM gtl
+FROM gtl-node
 WORKDIR /usr/src/app
 COPY --from=gtl ./ /usr/src/app
 RUN make build

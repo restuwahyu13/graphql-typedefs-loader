@@ -1,5 +1,5 @@
 {
-	"name": "gtl",
+	"name": "gtl-node",
 	"version": "0.0.1",
 	"description": "GTL is multiple loader for graphql schema",
 	"main": "./dist/index.js",

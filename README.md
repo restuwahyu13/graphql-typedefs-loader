@@ -15,7 +15,7 @@
 ## Installation
 
 ```bash
-$ npm install gtl -S or yarn add gtl -S
+$ npm install gtl-node -S or yarn add gtl-node -S
 ```
 
 ## Example Usage
@@ -308,7 +308,7 @@ $ npm install gtl -S or yarn add gtl -S
 - Testing Via Docker
 
   ```sh
-  docker build -t gtl or make dkb tag=gtl
+  docker build -t gtl-node or make dkb tag=gtl
   ```
 
 ### Bugs
@@ -317,7 +317,7 @@ For information on bugs related to package libraries, please visit [here](https:
 
 ### Contributing
 
-Want to make **GTL** more perfect ? Let's contribute and follow the [contribution guide.](https://github.com/restuwahyu13/graphql-typedefs-loader/blob/main/CONTRIBUTING.md)
+Want to make **Graphql Typedefs Loader** more perfect ? Let's contribute and follow the [contribution guide.](https://github.com/restuwahyu13/graphql-typedefs-loader/blob/main/CONTRIBUTING.md)
 
 ### License
 
