@@ -32,7 +32,7 @@ $ npm install gtl-node -S or yarn add gtl-node -S
       const playground = require('graphql-playground-middleware-express')
       const express = require('express')
       // import module like this
-      const { gtl } = require('gtl')
+      const { gtl } = require('gtl-node')
 
       // change with your graphql schema location folder
       const typeDefs = gtl({ directory: 'graphql/typeDefs', pattern: '**/*', extension: 'graphql' }) 
@@ -65,7 +65,7 @@ $ npm install gtl-node -S or yarn add gtl-node -S
       import playground from 'graphql-playground-middleware-express'
       import express from 'express'
       // import module like this
-      import { gtl } from 'gtl'
+      import { gtl } from 'gtl-node'
 
       // change with your graphql schema location folder
       const typeDefs = gtl({ directory: 'graphql/typeDefs', pattern: '**/*', extension: 'graphql' }) 
@@ -99,7 +99,7 @@ $ npm install gtl-node -S or yarn add gtl-node -S
       const playground = require('graphql-playground-middleware-express')
       const express = require('express')
       // import module like this
-      const { gtl } = require('gtl')
+      const { gtl } = require('gtl-node')
 
       // change with your graphql schema location folder
       const typeDefs = gtl({ pattern: '**/*', extension: 'graphql' }) 
@@ -132,7 +132,7 @@ $ npm install gtl-node -S or yarn add gtl-node -S
       import playground from 'graphql-playground-middleware-express'
       import express from 'express'
       // import module like this
-      import { gtl } from 'gtl'
+      import { gtl } from 'gtl-node'
 
       // change with your graphql schema location folder
       const typeDefs = gtl({ pattern: '**/*', extension: 'graphql' }) 
@@ -167,7 +167,7 @@ $ npm install gtl-node -S or yarn add gtl-node -S
       const playground = require('graphql-playground-middleware-express')
       const express = require('express')
       // import module like this
-      const { gtl } = require('gtl')
+      const { gtl } = require('gtl-node')
 
       // change with your graphql schema location folder
       const typeDefs = gtl({ directory: 'graphql/typedefs' , fileName: 'schema.graphql' }) 
@@ -200,7 +200,7 @@ $ npm install gtl-node -S or yarn add gtl-node -S
       import playground from 'graphql-playground-middleware-express'
       import express from 'express'
       // import module like this
-      import { gtl } from 'gtl'
+      import { gtl } from 'gtl-node'
 
       // change with your graphql schema location folder
       const typeDefs = gtl({ directory: 'graphql/typedefs' , fileName: 'schema.graphql' }) 
@@ -235,7 +235,7 @@ $ npm install gtl-node -S or yarn add gtl-node -S
       const playground = require('graphql-playground-middleware-express')
       const express = require('express')
       // import module like this
-      const { gtl } = require('gtl')
+      const { gtl } = require('gtl-node')
 
       // change with your graphql schema location folder
       const typeDefs = gtl({ fileName: 'schema.graphql' }) 
@@ -268,7 +268,7 @@ $ npm install gtl-node -S or yarn add gtl-node -S
       import playground from 'graphql-playground-middleware-express'
       import express from 'express'
       // import module like this
-      import { gtl } from 'gtl'
+      import { gtl } from 'gtl-node'
 
       // change with your graphql schema location folder
       const typeDefs = gtl({ fileName: 'schema.graphql' }) 
