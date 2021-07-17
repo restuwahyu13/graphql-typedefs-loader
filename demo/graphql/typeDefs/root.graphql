@@ -1,0 +1,9 @@
+#################################
+## SCHEMA ROOT FOR ALL TYPE DEFS
+############################ ####
+
+## TYPE SCHEMA FOR EXECUTE QUERY
+type Query
+
+## TYPE SCHEMA FOR EXECUTE MUTATION
+type Mutation

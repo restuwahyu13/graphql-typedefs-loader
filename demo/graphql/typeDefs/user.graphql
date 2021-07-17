@@ -1,0 +1,22 @@
+extend type Query {
+	resultName: User!
+}
+
+extend type Mutation {
+	createUser(input: UserInput): User!
+}
+
+input UserInput {
+	id: Int!
+	name: String!
+}
+
+interface IUser {
+	id: Int!
+	name: String!
+}
+
+type User implements IUser {
+	id: Int!
+	name: String!
+}

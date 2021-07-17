@@ -15,7 +15,7 @@ export function gtl(options: IGraphqTypeDefsLoader): string[] | Promise<string> 
 
 	if (options.extension !== undefined || options.pattern !== undefined || options.directory !== undefined) {
 		readFile = glob.sync(path.join(process.cwd(), `${options.directory}/${options.pattern}.${options.extension}`))
-	} else if(options.directory !== undefined) {
+	} else if (options.directory !== undefined) {
 		readFile = glob.sync(path.join(process.cwd(), `${options.directory}/${options.fileName}`))
 	} else {
 		readFile = glob.sync(path.join(process.cwd(), `${options.fileName}`))
@@ -25,7 +25,7 @@ export function gtl(options: IGraphqTypeDefsLoader): string[] | Promise<string> 
 		return readFile.map((v: string): string => {
 			let data = v.replace(/.*[/]/gi, '')
 
-			if(options.directory !== undefined) {
+			if (options.directory !== undefined) {
 				typeDefsLoader = fs.readFileSync(path.join(process.cwd(), `${options.directory}/${data}`)).toString('utf-8')
 			} else {
 				typeDefsLoader = fs.readFileSync(path.join(process.cwd(), `${data}`)).toString('utf-8')

@@ -1,0 +1,25 @@
+{
+	"name": "graphql-demo",
+	"version": "1.0.0",
+	"description": "GTL DEMO",
+	"main": "index.js",
+	"scripts": {
+		"start": "nodemon index.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@graphql-tools/schema": "^7.1.5",
+		"apollo-server-express": "^3.0.1",
+		"express": "^4.17.1",
+		"fast-glob": "^3.2.7",
+		"fs-extra": "^10.0.0",
+		"graphql": "^15.5.1",
+		"graphql-middleware": "^6.0.10"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.12",
+		"graphql-playground-middleware-express": "^1.7.22"
+	}
+}
