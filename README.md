@@ -307,7 +307,7 @@ $ npm install gtl-node -S or yarn add gtl-node -S
 - Testing Via Docker
 
   ```sh
-  docker build -t gtl-node or make dkb tag=gtl
+  docker build -t gtl-node or make dkb tag=gtl-node
   ```
 
 ### Bugs
