@@ -1,6 +1,8 @@
 import path from 'path'
-import glob from 'fast-glob'
 import fs from 'fs-extra'
+import { isType } from 'is-any-type'
+import { validatorCheck } from './utils/validatorCheck'
+import { fileCheck } from './utils/fileCheck'
 
 export interface IGraphqTypeDefsLoader {
 	directory?: string
@@ -12,27 +14,23 @@ export interface IGraphqTypeDefsLoader {
 export function gtl(options: IGraphqTypeDefsLoader): string[] | Promise<string> {
 	let readFile: string[]
 	let typeDefsLoader: string
+	let validator = validatorCheck(options)
 
-	if (options.extension !== undefined || options.pattern !== undefined || options.directory !== undefined) {
-		readFile = glob.sync(path.join(process.cwd(), `${options.directory}/${options.pattern}.${options.extension}`))
-	} else if (options.directory !== undefined) {
-		readFile = glob.sync(path.join(process.cwd(), `${options.directory}/${options.fileName}`))
+	if (isType(validator) !== 'boolean') {
+		validatorCheck(options)
 	} else {
-		readFile = glob.sync(path.join(process.cwd(), `${options.fileName}`))
+		readFile = fileCheck(options)
+		if (readFile.length > 0) {
+			return readFile.map((v: string): string => {
+				let data = v.replace(/.*[/]/gi, '')
+				if (options.directory !== undefined) {
+					typeDefsLoader = fs.readFileSync(path.join(process.cwd(), `${options.directory}/${data.trim()}`)).toString('utf-8')
+				} else {
+					typeDefsLoader = fs.readFileSync(path.join(process.cwd(), `${data.trim()}`)).toString('utf-8')
+				}
+				return typeDefsLoader
+			})
+		}
+		return Promise.reject(new Error('.graphql file not exist in directory'))
 	}
-
-	if (readFile.length > 0) {
-		return readFile.map((v: string): string => {
-			let data = v.replace(/.*[/]/gi, '')
-
-			if (options.directory !== undefined) {
-				typeDefsLoader = fs.readFileSync(path.join(process.cwd(), `${options.directory}/${data}`)).toString('utf-8')
-			} else {
-				typeDefsLoader = fs.readFileSync(path.join(process.cwd(), `${data}`)).toString('utf-8')
-			}
-
-			return typeDefsLoader
-		})
-	}
-	return Promise.reject(new Error('.graphql not exist in directory'))
 }
