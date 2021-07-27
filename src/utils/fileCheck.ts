@@ -1,10 +1,11 @@
 import glob from 'fast-glob'
 import path from 'path'
 import { isType } from 'is-any-type'
+import { GtlNodeError } from './customError'
 
 export const fileCheck = (options: Record<string, any>): string[] | any => {
 	if (isType(options) !== 'object' && !(options instanceof Object)) {
-		return Promise.reject(new Error('options is required'))
+		return Promise.reject(new GtlNodeError('options is required'))
 	}
 
 	let readFile: string[]

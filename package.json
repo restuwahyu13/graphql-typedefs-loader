@@ -1,6 +1,6 @@
 {
 	"name": "gtl-node",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "gtl-node is multiple loader for graphql schema file",
 	"main": "./dist/index.js",
 	"files": [
@@ -37,23 +37,23 @@
 	"keywords": [
 		"graphql-tools",
 		"graphql",
-		"typedefs",
-		"schema loader",
+		"gql",
 		"loader",
+		"schema loader",
 		"gtl",
+		"gtl-node",
 		"node_modules",
 		"node",
 		"nodejs",
+		"typedefs",
 		"javascript",
 		"typescript"
 	],
 	"dependencies": {
 		"fast-glob": "^3.2.7",
-		"fs-extra": "^10.0.0",
 		"is-any-type": "0.0.3"
 	},
 	"devDependencies": {
-		"@types/fs-extra": "^9.0.12",
 		"@types/jest": "^26.0.20",
 		"@types/node": "^15.0.1",
 		"@typescript-eslint/eslint-plugin": "^4.12.0",

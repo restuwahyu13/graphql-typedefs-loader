@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"outDir": "dist",
 		"target": "ESNext",
-		"module": "CommonJS",
+		"module": "UMD",
 		"moduleResolution": "Node",
 		"esModuleInterop": true,
 		"allowSyntheticDefaultImports": true,

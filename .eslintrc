@@ -23,7 +23,8 @@
 		"jest/valid-expect-in-promise": 1,
 		"jest/no-conditional-expect": 1,
 		"no-mixed-spaces-and-tabs": 0,
-		"no-unneeded-ternary": 0
+		"no-unneeded-ternary": 0,
+		"array-callback-return": 0
 	},
 	"env": {
 		"node": true,

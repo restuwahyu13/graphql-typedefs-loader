@@ -4,9 +4,9 @@ const { applyMiddleware } = require('graphql-middleware')
 const { makeExecutableSchema } = require('@graphql-tools/schema')
 const graphqlPlayground = require('graphql-playground-middleware-express').default
 const express = require('express')
-const { gtl } = require('gtl')
+const { gtl } = require('gtl-node')
 
-const typeDefs = gtl({ directory: 'graphql/typeDefs', pattern: '**/*', extension: 'graphql' })
+const typeDefs = gtl({  directory: 'graphql/typeDefs/', pattern: '**/*', extension: 'graphql'})
 const { resolvers } = require('./graphql/resolvers')
 
 ;(async function () {
