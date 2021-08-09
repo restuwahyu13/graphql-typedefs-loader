@@ -51,7 +51,7 @@
 	],
 	"dependencies": {
 		"fast-glob": "^3.2.7",
-		"is-any-type": "0.0.3"
+		"is-any-type": "0.0.4"
 	},
 	"devDependencies": {
 		"@types/jest": "^26.0.20",
